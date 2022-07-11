@@ -1,0 +1,30 @@
+
+.box{
+    height: 190px;
+    padding: 8px;
+    text-align: center;
+}
+
+.pairs{
+    background-color: #CCCCCC;
+}
+
+.impairs{
+    background-color: #aaaaaa;
+}
+
+.blue{
+    color: #3A85FF;
+}
+
+.black{
+    color: black;
+}
+
+.red{
+    color: red;
+}
+
+.yellow{
+    color: yellow;
+}
