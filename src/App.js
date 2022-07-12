@@ -20,13 +20,33 @@ class App extends React.Component {
 
         <div className="row">
              {/* water */}
-             <Box icon="local_drink" color="blue" value={1.5} unit="L" background="pairs"/>
+             <Box 
+             icon="local_drink" 
+             color="#3A85FF" 
+             value={1.5} 
+             unit="L" 
+             />
              {/* Steps */}
-             <Box icon="directions_walk" color="black" value={3000} unit="steps" background="impairs"/>
+             <Box 
+             icon="directions_walk" 
+             color="black" 
+             value={3000} 
+             unit="steps"
+             />
              {/* Heart */}
-             <Box icon="favorite" color="red" value={120} unit="bpm" background="pairs"/>
+             <Box 
+             icon="favorite" 
+             color="red" 
+             value={120} 
+             unit="bpm" 
+             />
              {/* Temperature */}
-             <Box icon="wb_sunny" color="yellow" value={-10} unit="°C" background="impairs"/>
+             <Box 
+             icon="wb_sunny" 
+             color="yellow" 
+             value={-10} 
+             unit="°C"
+             />
       </div>
 
       </div>
