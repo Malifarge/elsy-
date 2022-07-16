@@ -31,24 +31,24 @@ class App extends React.Component {
     this.setState({
       heart: e.target.value
     })
-    this.waterCalcul()
+    this.calculateWater()
   }
 
   onStepChange = e => {
     this.setState({
       steps : e.target.value
     })
-    this.waterCalcul()
+    this.calculateWater()
   }
 
   onTempChange = e => {
     this.setState({
       temperature : e.target.value
     })
-    this.waterCalcul()
+    this.calculateWater()
   }
 
-  waterCalcul = () =>{
+  calculateWater = () =>{
     if (this.state.temperature>20){
       sunPlus= (this.state.temperature - 20)*0.02
     }
