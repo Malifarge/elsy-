@@ -13,6 +13,7 @@ const stepsMax =50000
 let stepPlus = 0
 let heartPlus = 0
 let sunPlus = 0
+let waterHeight = 150
 
 
 class App extends React.Component {
@@ -51,16 +52,24 @@ class App extends React.Component {
   calculateWater = () =>{
     if (this.state.temperature>20){
       sunPlus= (this.state.temperature - 20)*0.02
+      console.log(sunPlus);
+    } else{
+      sunPlus=0
     }
     if (this.state.heart>120){
       heartPlus=(this.state.heart-120)*0.0008
+    }else{
+      heartPlus=0
     }
     if (this.state.steps> 10000){
       stepPlus=(this.state.steps-10000)*0.00002
+    }else{
+      stepPlus=0
     }
     this.setState({
       water : 1.5 + stepPlus + heartPlus + sunPlus
     })
+    waterHeight = this.state.water*100
   }
 
   render() {
@@ -106,6 +115,15 @@ class App extends React.Component {
              max={tempMax}
              change={this.onTempChange}
              />
+      </div>
+      <div className="waterUp" style={{
+        width: "100%",
+        height: `${waterHeight}px` ,
+        position: "absolute",
+        bottom: "0",
+        left: "0",
+        opacity: `${this.state.water/2 -0.5}`
+      }}>
       </div>
 
       </div>
