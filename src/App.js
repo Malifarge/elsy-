@@ -29,33 +29,20 @@ class App extends React.Component {
   }
 
   onHeartChange = e =>{
-    this.setState({
-      heart: Number(e.target.value)
-    }), () =>{   
-      this.calculateWater()
-       }
+    this.setState({heart: Number(e.target.value)}, () =>{ this.calculateWater()})
   }
 
   onStepChange = e => {
-    this.setState({
-      steps : Number(e.target.value)
-    }), () =>{   
-      this.calculateWater()
-       }
+    this.setState({steps : Number(e.target.value)}, () =>{this.calculateWater()})
   }
 
   onTempChange = e => {
-    this.setState({
-      temperature : Number(e.target.value)
-    }), () =>{   
-      this.calculateWater()
-       }
+    this.setState({temperature : Number(e.target.value)}, () =>{this.calculateWater() })
   }
 
   calculateWater = () =>{
     if (this.state.temperature>20){
       sunPlus= (this.state.temperature - 20)*0.02
-      console.log(sunPlus);
     } else{
       sunPlus=0
     }
@@ -70,7 +57,7 @@ class App extends React.Component {
       stepPlus=0
     }
     this.setState({
-      water : 1.5 + stepPlus + heartPlus + sunPlus
+      water : (1.5 + stepPlus + heartPlus + sunPlus).toFixed(2)
     })
     waterHeight = this.state.water*100
   }
