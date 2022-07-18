@@ -16,7 +16,6 @@ class Box extends React.Component{
                 </span>
                 <p>{this.props.value} {this.props.unit}</p>
                 {itsWater ? itsStep ? <input type='range' step="1000"  min={this.props.min} max={this.props.max} onChange={this.props.change} /> : <input type='range'  min={this.props.min} max={this.props.max} onChange={this.props.change} /> : ""}
-                
             </div>
         )
     }

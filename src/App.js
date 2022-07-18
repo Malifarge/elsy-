@@ -30,23 +30,26 @@ class App extends React.Component {
 
   onHeartChange = e =>{
     this.setState({
-      heart: e.target.value
-    })
-    this.calculateWater()
+      heart: Number(e.target.value)
+    }), () =>{   
+      this.calculateWater()
+       }
   }
 
   onStepChange = e => {
     this.setState({
-      steps : e.target.value
-    })
-    this.calculateWater()
+      steps : Number(e.target.value)
+    }), () =>{   
+      this.calculateWater()
+       }
   }
 
   onTempChange = e => {
     this.setState({
-      temperature : e.target.value
-    })
-    this.calculateWater()
+      temperature : Number(e.target.value)
+    }), () =>{   
+      this.calculateWater()
+       }
   }
 
   calculateWater = () =>{
